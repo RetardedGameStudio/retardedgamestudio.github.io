@@ -1,16 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Run Pepper by RetardedGameStudio</title>
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-  <style type="text/tailwindcss">
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunPepper</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Titan+One&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #D42949;
+            --background: #FDF8F2;
+            --black: #1C0A10;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        h1, h2, nav a {
+            font-family: 'Titan One', cursive;
+            font-weight: 400;
+        }
+    </style>
 </head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Cours pepper cours !
-  </h1>
+<body class="bg-[var(--background)] text-[var(--black)]">
+
+<!-- Menu Fixe -->
+<nav class="bg-white shadow-md fixed w-full top-0 left-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#">
+            <img src="images/logo.png" alt="RunPepper Logo" class="h-10">
+        </a>
+        <ul class="flex space-x-6">
+            <li><a href="#hero" class="text-[var(--black)] hover:text-[var(--primary)]">Accueil</a></li>
+            <li><a href="#privacy" class="text-[var(--black)] hover:text-[var(--primary)]">Confidentialité</a></li>
+            <li><a href="#contact" class="text-[var(--black)] hover:text-[var(--primary)]">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Section Hero -->
+<section id="hero" class="h-screen flex flex-col justify-center items-center text-center px-6 mt-16">
+    <h1 class="text-4xl font-extrabold text-[var(--black)]">Bienvenue sur RunPepper</h1>
+    <p class="mt-4 text-lg text-[var(--black)]">Découvrez l'univers de RunPepper et plongez dans une aventure palpitante.</p>
+    <div class="flex flex-row mt-6 gap-2">
+        <a href="#privacy" class="h-11 bg-[var(--primary)] text-white px-6 py-3 rounded-lg hover:bg-[var(--black)]">En savoir plus</a>
+        <img src="images/GetItOnGooglePlay_Badge_Web_color_French.png" alt="Get it on GooglePlay!" class="h-11" />
+    </div>
+</section>
+
+<!-- Section Politiques de Confidentialité -->
+<section id="privacy" class="bg-white py-16 px-6">
+    <div class="container mx-auto max-w-4xl">
+        <h2 class="text-3xl font-bold text-[var(--black)] text-center">Politique de Confidentialité</h2>
+        <p class="mt-4 text-[var(--black)] text-center">Nous prenons la protection de vos données personnelles très au sérieux.</p>
+        <div class="mt-6 space-y-4 text-[var(--black)]">
+            <p>✔️ Vos données sont sécurisées et ne seront jamais partagées sans votre consentement.</p>
+            <p>✔️ Vous pouvez à tout moment demander la suppression de vos informations.</p>
+            <p>✔️ Nous utilisons des mesures de sécurité avancées pour garantir la confidentialité.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact" class="bg-[var(--black)] text-white py-8">
+    <div class="container mx-auto text-center">
+        <p class="text-gray-400">&copy; 2025 RunPepper - Tous droits réservés.</p>
+        <div class="mt-4 space-x-4">
+            <a href="#" class="text-[var(--primary)] hover:text-white">Twitter</a>
+            <a href="#" class="text-[var(--primary)] hover:text-white">Facebook</a>
+            <a href="#" class="text-[var(--primary)] hover:text-white">LinkedIn</a>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
