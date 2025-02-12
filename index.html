@@ -10,6 +10,7 @@
     <link rel="manifest" href="images/favicon/site.webmanifest">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="scripts/i18n.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Titan+One&display=swap" rel="stylesheet">
@@ -37,19 +38,23 @@
             <img src="images/logo.png" alt="RunPepper Logo" class="h-10">
         </a>
         <ul class="flex space-x-6">
-            <li><a href="#hero" class="text-[var(--black)] hover:text-[var(--primary)]">Accueil</a></li>
-            <li><a href="#privacy" class="text-[var(--black)] hover:text-[var(--primary)]">Confidentialité</a></li>
-            <li><a href="#contact" class="text-[var(--black)] hover:text-[var(--primary)]">Contact</a></li>
+            <li><a data-t="home" href="#hero" class="text-[var(--black)] hover:text-[var(--primary)]">Accueil</a></li>
+            <li><a data-t="privacy" href="#privacy" class="text-[var(--black)] hover:text-[var(--primary)]">Confidentialité</a></li>
+            <li><a data-t="contact" href="#contact" class="text-[var(--black)] hover:text-[var(--primary)]">Contact</a></li>
         </ul>
+        <select id="language-selection" class="border border-gray-300 rounded px-2 py-1 text-[var(--black)] bg-white">
+            <option value="fr">Français</option>
+            <option value="en">English</option>
+        </select>
     </div>
 </nav>
 
 <!-- Section Hero -->
 <section id="hero" class="h-screen flex flex-col justify-center items-center text-center px-6 mt-16">
-    <h1 class="text-4xl font-extrabold text-[var(--black)]">Bienvenue sur RunPepper</h1>
-    <p class="mt-4 text-lg text-[var(--black)]">Découvrez l'univers de RunPepper et plongez dans une aventure palpitante.</p>
+    <h1 data-t="hero_title" class="text-4xl font-extrabold text-[var(--black)]">Bienvenue sur RunPepper</h1>
+    <p data-t="hero_subtitle" class="mt-4 text-lg text-[var(--black)]">Découvrez l'univers de RunPepper et plongez dans une aventure palpitante.</p>
     <div class="flex flex-row mt-6 gap-2">
-        <a href="#privacy" class="h-11 bg-[var(--primary)] text-white px-6 py-3 rounded-lg hover:bg-[var(--black)]">En savoir plus</a>
+        <a data-t="read_more_btn" href="#privacy" class="h-11 bg-[var(--primary)] text-white px-6 py-3 rounded-lg hover:bg-[var(--black)]">En savoir plus</a>
         <img src="images/GetItOnGooglePlay_Badge_Web_color_French.png" alt="Get it on GooglePlay!" class="h-11" />
     </div>
 </section>
@@ -57,7 +62,7 @@
 <!-- Section Politiques de Confidentialité -->
 <section id="privacy" class="bg-white py-16 px-6">
     <div class="container mx-auto max-w-4xl">
-        <h2 class="text-3xl font-bold text-[var(--black)] text-center">Politique de Confidentialité</h2>
+        <h2 data-t="privacy_title" class="text-3xl font-bold text-[var(--black)] text-center">Politique de Confidentialité</h2>
         <div class="mt-6 space-y-4 text-[var(--black)]">
             <p>Introduction : Votre confidentialité est importante pour nous. Cette politique de confidentialité explique comment notre application de jeu respecte votre vie privée en ne collectant, n'utilisant et ne stockant aucune donnée personnelle.</p>
             <p>Données Collectées : Notre application ne collecte, ne stocke et ne partage aucune donnée personnelle ou identifiable. Aucun nom, adresse e-mail, numéro de téléphone ou toute autre information personnelle ne sont requis pour utiliser l'application.</p>
@@ -73,7 +78,7 @@
 <!-- Footer -->
 <footer id="contact" class="bg-[var(--black)] text-white py-8">
     <div class="container mx-auto text-center">
-        <p class="text-gray-400">&copy; 2025 RunPepper - Tous droits réservés.</p>
+        <p data-t="footer_copyright" class="text-gray-400">&copy; 2025 RunPepper - Tous droits réservés.</p>
         <div class="mt-4 space-x-4">
             <a href="#" class="text-[var(--primary)] hover:text-white">Twitter</a>
             <a href="#" class="text-[var(--primary)] hover:text-white">Facebook</a>
@@ -82,5 +87,26 @@
     </div>
 </footer>
 
+<script>
+    var selectLanguage = document.querySelector("#language-selection")
+
+    selectLanguage.addEventListener("change", function (event) {
+        console.log(event)
+    })
+    var i18n = new I18n({
+        en: {
+            home: "Home",
+            privacy: "Privacy",
+            contact: "Contact",
+            hero_title: "Welcome on RunPepper",
+            hero_subtitle: "Discover RunPepper universe and dive into an amazing adventure !",
+            read_more_btn: "Read more",
+            privacy_title: "Privacy",
+            footer_copyright: "©2025 RunPepper - All rights reserved"
+        },
+    });
+    i18n.init()
+    i18n.translatePage()
+</script>
 </body>
 </html>
