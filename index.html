@@ -64,13 +64,13 @@
     <div class="container mx-auto max-w-4xl">
         <h2 data-t="privacy_title" class="text-3xl font-bold text-[var(--black)] text-center">Politique de Confidentialité</h2>
         <div class="mt-6 space-y-4 text-[var(--black)]">
-            <p>Introduction : Votre confidentialité est importante pour nous. Cette politique de confidentialité explique comment notre application de jeu respecte votre vie privée en ne collectant, n'utilisant et ne stockant aucune donnée personnelle.</p>
-            <p>Données Collectées : Notre application ne collecte, ne stocke et ne partage aucune donnée personnelle ou identifiable. Aucun nom, adresse e-mail, numéro de téléphone ou toute autre information personnelle ne sont requis pour utiliser l'application.</p>
-            <p>Permissions Utilisées : L'application peut nécessiter certaines autorisations sur votre appareil uniquement pour assurer son bon fonctionnement (par exemple, l'accès au stockage pour enregistrer la progression du jeu en local). Aucune de ces informations n'est collectée ni partagée avec des tiers.</p>
-            <p>Connexion Internet : Il est tout à fait possible de jouer sans connexion. Le jeu ne communique en aucun cas avec Internet. La seule exception est lorsque l'utilisateur souhaite effectuer un don au développeur via le bouton "Donate".</p>
-            <p>Sécurité : Puisque nous ne collectons pas de données, aucun risque de fuite ou de mauvaise utilisation de vos informations personnelles n’existe. L’application fonctionne en toute indépendance sans enregistrement d’utilisateur.</p>
-            <p>Modifications de cette Politique : Nous pouvons mettre à jour cette politique de confidentialité à tout moment. Toute modification sera affichée directement dans cette section de l'application.</p>
-            <p>Contact : Si vous avez des questions concernant cette politique de confidentialité, vous pouvez nous contacter à retardedgamesdev@gmail.com.</p>
+            <p data-t="privacy_intro">Introduction : Votre confidentialité est importante pour nous. Cette politique de confidentialité explique comment notre application de jeu respecte votre vie privée en ne collectant, n'utilisant et ne stockant aucune donnée personnelle.</p>
+            <p data-t="private_data_collection">Données Collectées : Notre application ne collecte, ne stocke et ne partage aucune donnée personnelle ou identifiable. Aucun nom, adresse e-mail, numéro de téléphone ou toute autre information personnelle ne sont requis pour utiliser l'application.</p>
+            <p data-t="private_permissions">Permissions Utilisées : L'application peut nécessiter certaines autorisations sur votre appareil uniquement pour assurer son bon fonctionnement (par exemple, l'accès au stockage pour enregistrer la progression du jeu en local). Aucune de ces informations n'est collectée ni partagée avec des tiers.</p>
+            <p data-t="private_internet">Connexion Internet : Il est tout à fait possible de jouer sans connexion. Le jeu ne communique en aucun cas avec Internet. La seule exception est lorsque l'utilisateur souhaite effectuer un don au développeur via le bouton "Donate".</p>
+            <p data-t="private_security">Sécurité : Puisque nous ne collectons pas de données, aucun risque de fuite ou de mauvaise utilisation de vos informations personnelles n’existe. L’application fonctionne en toute indépendance sans enregistrement d’utilisateur.</p>
+            <p data-t="private_change">Modifications de cette Politique : Nous pouvons mettre à jour cette politique de confidentialité à tout moment. Toute modification sera affichée directement dans cette section de l'application.</p>
+            <p data-t="private_contact">Contact : Si vous avez des questions concernant cette politique de confidentialité, vous pouvez nous contacter à retardedgamesdev@gmail.com.</p>
         </div>
     </div>
 </section>
@@ -88,11 +88,6 @@
 </footer>
 
 <script>
-    var selectLanguage = document.querySelector("#language-selection")
-
-    selectLanguage.addEventListener("change", function (event) {
-        console.log(event)
-    })
     var i18n = new I18n({
         en: {
             home: "Home",
@@ -102,11 +97,47 @@
             hero_subtitle: "Discover RunPepper universe and dive into an amazing adventure !",
             read_more_btn: "Read more",
             privacy_title: "Privacy",
-            footer_copyright: "©2025 RunPepper - All rights reserved"
+            footer_copyright: "© 2025 RunPepper - All rights reserved",
+            privacy_intro: "Introduction: Your privacy is important to us. This privacy policy explains how our game application respects your privacy by not collecting, using or storing any personal data.",
+            private_data_collection: "Data collected: Our application does not collect, store or share any personal or identifiable data. No name, e-mail address, phone number or other personal information is required to use the application.",
+            private_permissions: "Permissions Used: The application may require certain permissions on your device solely to ensure its proper operation (for example, access to storage to save game progress locally). None of this information is collected or shared with third parties.",
+            private_internet: "Internet connection: You can play without an Internet connection. The game does not communicate with the Internet in any way. The only exception is when the user wishes to make a donation to the developer via the “Donate” button.",
+            private_security: "Security: Since we do not collect any data, there is no risk of leakage or misuse of your personal information. The application operates independently without user registration.",
+            private_change: "Changes to this Policy: We may update this privacy policy at any time. Any changes will be posted directly in this section of the application.",
+            private_contact: "Contact: If you have any questions about this privacy policy, you can contact us at retardedgamesdev@gmail.com.",
+        },
+        fr: {
+            home: "Accueil",
+            privacy: "Confidentialité",
+            contact: "Contact",
+            hero_title: "Bienvenue sur RunPepper",
+            hero_subtitle: "Découvrez l'univers de RunPepper et plongez dans une aventure palpitante.",
+            read_more_btn: "En savoir plus",
+            privacy_title: "Politique de Confidentialité",
+            footer_copyright: "© 2025 RunPepper - Tous droits réservés.",
+            privacy_intro: "Introduction : Votre confidentialité est importante pour nous. Cette politique de confidentialité explique comment notre application de jeu respecte votre vie privée en ne collectant, n'utilisant et ne stockant aucune donnée personnelle.",
+            private_data_collection: "Données Collectées : Notre application ne collecte, ne stocke et ne partage aucune donnée personnelle ou identifiable. Aucun nom, adresse e-mail, numéro de téléphone ou toute autre information personnelle ne sont requis pour utiliser l'application.",
+            private_permissions: "Permissions Utilisées : L'application peut nécessiter certaines autorisations sur votre appareil uniquement pour assurer son bon fonctionnement (par exemple, l'accès au stockage pour enregistrer la progression du jeu en local). Aucune de ces informations n'est collectée ni partagée avec des tiers.",
+            private_internet: "Connexion Internet : Il est tout à fait possible de jouer sans connexion. Le jeu ne communique en aucun cas avec Internet. La seule exception est lorsque l'utilisateur souhaite effectuer un don au développeur via le bouton \"Donate\".",
+            private_security: "Sécurité : Puisque nous ne collectons pas de données, aucun risque de fuite ou de mauvaise utilisation de vos informations personnelles n’existe. L’application fonctionne en toute indépendance sans enregistrement d’utilisateur.",
+            private_change: "Modifications de cette Politique : Nous pouvons mettre à jour cette politique de confidentialité à tout moment. Toute modification sera affichée directement dans cette section de l'application.",
+            private_contact: "Contact : Si vous avez des questions concernant cette politique de confidentialité, vous pouvez nous contacter à retardedgamesdev@gmail.com.",
         },
     });
     i18n.init()
     i18n.translatePage()
+
+    var selectLanguage = document.querySelector("#language-selection")
+    if (selectLanguage) {
+        selectLanguage.querySelectorAll("option").forEach(option => {
+            option.selected = option.value === i18n.getLang();
+        });
+    }
+
+
+    selectLanguage.addEventListener("change", function (event) {
+        i18n.setLang(event.target.value)
+    })
 </script>
 </body>
 </html>
